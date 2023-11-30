@@ -97,12 +97,12 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  SCH_Add_Task(offLed, 0, 0);
+  offLed();
   SCH_Add_Task(dot_blink, 0, 50);
   SCH_Add_Task(LedBlinking, 50, 100);
   SCH_Add_Task(amber_led, 0, 150);
   SCH_Add_Task(pink_led, 0, 200);
-  SCH_Add_Task(white_led, 0, 250);
+  SCH_Add_Task(white_led, 250, 0);  //oneshot task
   SCH_Add_Task(time_run, 0, 100);
   SCH_Add_Task(LEDScanning, 0, 1);
  // SCH_Add_Task(LEDScanningSec, 0, 1);
